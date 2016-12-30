@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+
+    <title>Tizen Mobile Web Basic Application</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    
+	<div id="touchable">
+		Touch or drag this box with one finger.
+   		
+	</div>
+	<div id="log"></div>
+	<script>
+   var log = document.getElementById("log");
+   var touchable = document.getElementById("touchable");
+    log.innerHTML = "<p>Touch Events</p>";
+   /* touchstart event */
+   touchable.addEventListener("touchstart", function(e) 
+   {
+      log.innerHTML += "<p>Touch Event: touchstart</p>";
+   }, false);
+    
+   /* touchend event */
+   touchable.addEventListener("touchend", function(e) 
+   {
+      log.innerHTML += "<p>Touch Event: touchend</p>";
+   }, false);
+    
+   /* touchmove event */
+   touchable.addEventListener("touchmove", function(e) 
+   {
+      log.innerHTML += "<p>Touch Event: touchmove</p>";
+   }, false);
+    
+   /* touchcancel event */
+   touchable.addEventListener("touchcancel", function(e) 
+   {
+      log.innerHTML += "<p>Touch Event: touchcancel</p>";
+   }, false);
+	</script>
+       
+</body>
+
+</html>
